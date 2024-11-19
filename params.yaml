@@ -1,0 +1,34 @@
+data_ingestion:
+  directory_path: "artifacts/dataset/PlantVillage/potato"
+  image_size: 256
+  batch_size: 32
+  class_names:
+    - "Potato___Early_blight"
+    - "Potato___Late_blight"
+    - "Potato___healthy"
+
+data_preprocessing:
+  shuffle_size: 1000
+
+model_training:
+  epochs: 10
+  channels: 3
+  conv_layers:
+    - filters: 32
+      kernel_size: [3, 3]
+    - filters: 64
+      kernel_size: [3, 3]
+    - filters: 64
+      kernel_size: [3, 3]
+  dense_units: 64
+
+augmentation:
+  flip: "horizontal_and_vertical"
+  rotation: 0.2
+
+output:
+  model_dir: "artifacts/saved_models"
+  version: 1
+
+logging:
+  level: "INFO"  # Set log level: DEBUG, INFO, WARNING, ERROR

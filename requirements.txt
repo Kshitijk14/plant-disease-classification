@@ -1,0 +1,14 @@
+pandas
+matplotlib
+tensorflow
+seaborn
+plotly
+scikit-learn
+nbformat
+Flask
+flask-cors
+pillow
+gunicorn
+werkzeug
+ipynb-py-convert
+pyyaml
